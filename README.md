@@ -34,7 +34,7 @@ Repositório que contém Skills necessárias para vagas de Engenheiro de softwar
 
 ### Lista de algoritmos:
 
-- [ ] Binary search
+- [x] Binary search
 - [ ] Quicksort
 - [ ] Mergesort
 - [ ] A*

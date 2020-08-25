@@ -36,7 +36,7 @@ Repositório que contém Skills necessárias para vagas de Engenheiro de softwar
 
 - [x] Binary search
 - [x] Quicksort
-- [ ] Mergesort
+- [x] Mergesort
 - [ ] A*
 - [ ] Breadth-first search
 - [ ] Depth-first search

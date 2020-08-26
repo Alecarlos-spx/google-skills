@@ -1,6 +1,6 @@
 # Mergesort
 
-Assim como o Quicksort o Mergesort é um algoritmo de ordenação que utiliza do paradigma divide and conquer,
+Assim como o Quicksort o Mergesort é um algoritmo de ordenação que utiliza do paradigma [divide and conquer](https://github.com/GuilhermehChaves/google-skills/tree/master/algoritmos/divide_and_conquer),
 que consiste em ramificar a entrada várias vezes para assim separar os problemas em vários outros menores.
 
 ### Merge

@@ -2,7 +2,7 @@
 
 O Quicksort é um algoritmo de ordenação que utiliza o conceito de ordenação por troca, ordenação é quando colocamos algo em ordem podendo ser crescente, decrescente, alfabética, etc.
 
-Este algoritmo utiliza do paradigma divide and conquer, que consiste em ramificar a entrada várias vezes para assim separar o problemas em vários outros menores.
+Este algoritmo utiliza do paradigma [divide and conquer](https://github.com/GuilhermehChaves/google-skills/tree/master/algoritmos/divide_and_conquer), que consiste em ramificar a entrada várias vezes para assim separar o problemas em vários outros menores.
 
 #### Partition
 

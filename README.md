@@ -40,5 +40,5 @@ Repositório que contém Skills necessárias para vagas de Engenheiro de softwar
 - [ ] A*
 - [ ] Breadth-first search
 - [ ] Depth-first search
-- [ ] Divide and conquer​
+- [x] Divide and conquer​
 - [ ] Dynamic programming

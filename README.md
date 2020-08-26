@@ -2,7 +2,7 @@
 
 # Google Skills
 
-Repositório que contém Skills necessárias para vagas de Engenheiro de software na Google segundo o [vídeo do Filipe Deschamps](https://www.youtube.com/watch?v=8I86WmxdzzA)
+Repositório que contém conteúdos referente a skills técnicas necessárias para vagas de Engenheiro de software na Google segundo o [vídeo do Filipe Deschamps](https://www.youtube.com/watch?v=8I86WmxdzzA). [Artigo mencionado no vídeo](https://www.educative.io/blog/google-coding-interview).
 
 <br/>
 <br />

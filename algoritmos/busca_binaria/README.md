@@ -86,9 +86,11 @@ de interações que o algoritmo realizará com nosso array como pode ser visto a
 
 ### Referências
 
-https://algoritmosempython.com.br/cursos/algoritmos-python/pesquisa-ordenacao/pesquisa-binaria
-https://pt.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search
-https://www.blogcyberini.com/2017/09/busca-binaria.html
+- https://algoritmosempython.com.br/cursos/algoritmos-python/pesquisa-ordenacao/pesquisa-binaria
+
+- https://pt.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search
+
+- https://www.blogcyberini.com/2017/09/busca-binaria.html
 
 ### Materiais complementares
 

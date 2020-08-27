@@ -96,9 +96,9 @@ func merge(left, right []int) (result []int) {
 
 ### Referências
 
-https://www.golangprograms.com/golang-program-for-implementation-of-mergesort.html
+- https://www.golangprograms.com/golang-program-for-implementation-of-mergesort.html
 
-https://www.geeksforgeeks.org/merge-sort/
+- https://www.geeksforgeeks.org/merge-sort/
 
 ### Materiais complementares
 

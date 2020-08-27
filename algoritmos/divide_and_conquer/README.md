@@ -25,9 +25,9 @@ Entre outros ...
 
 ### Referências
 
-https://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/divide-and-conquer.html
+- https://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/divide-and-conquer.html
 
-https://pt.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms
+- https://pt.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms
 
 ### Materiais complementares
 

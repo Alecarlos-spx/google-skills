@@ -89,3 +89,11 @@ de interações que o algoritmo realizará com nosso array como pode ser visto a
 https://algoritmosempython.com.br/cursos/algoritmos-python/pesquisa-ordenacao/pesquisa-binaria
 https://pt.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search
 https://www.blogcyberini.com/2017/09/busca-binaria.html
+
+### Materiais complementares
+
+- [Como implementar BUSCA BINÁRIA? *Você deveria aprender isso!* | Algoritmos #10](https://www.youtube.com/watch?v=EgLE5HwRy_M) - vídeo
+
+- [Busca Binária](https://www.youtube.com/watch?v=l6pxuyV3mKQ) - vídeo
+
+- [43 - Busca Binária](https://www.youtube.com/watch?v=NxriUYWxoEU) - vídeo

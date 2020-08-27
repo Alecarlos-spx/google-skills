@@ -99,3 +99,9 @@ func merge(left, right []int) (result []int) {
 https://www.golangprograms.com/golang-program-for-implementation-of-mergesort.html
 
 https://www.geeksforgeeks.org/merge-sort/
+
+### Materiais complementares
+
+- [MERGE SORT | Algoritmos #7](https://www.youtube.com/watch?v=5prE6Mz8Vh0) - vídeo
+
+- [Algoritmo de ordenação - MergeSort Video Aula](https://www.youtube.com/watch?v=PKCMMSXQyJE) - vídeo

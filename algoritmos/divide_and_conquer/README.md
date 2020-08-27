@@ -28,3 +28,7 @@ Entre outros ...
 https://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/divide-and-conquer.html
 
 https://pt.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms
+
+### Materiais complementares
+
+- [Projeto e Análise de Algoritmos - Aula 04 - Divisão e conquista - Equações de recorrência](https://www.youtube.com/watch?v=eTYN65ap_cU) - vídeo

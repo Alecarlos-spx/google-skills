@@ -83,3 +83,7 @@ assim divide o array em várias partes e ordena cada parte separadamente até qu
 https://www.golangprograms.com/golang-program-for-implementation-of-quick-sort.html
 
 https://blog.pantuza.com/artigos/o-algoritmo-de-ordenacao-quicksort
+
+### Materiais complementares
+
+- [QUICKSORT | Algoritmos #8](https://www.youtube.com/watch?v=wx5juM9bbFo) - vídeo

@@ -1,6 +1,6 @@
 # Busca binária
 
-Quando queremos fazer uma busca em um vetor, podemos utilizar o laço de repetição for/foreach para percorrê-lo e então quando encontrarmos o valor o retornamos, certo? Porém a quantidade de interações que o algoritmo terá será muito elevada considerando que contenha um número grande de elementos, este tipo de pesquisa é chamado de pesquisa linear, onde a função de complexidade da pesquisa cresce de forma linear.
+Quando queremos fazer uma busca em um array, podemos utilizar o laço de repetição for/foreach para percorrê-lo e então quando encontrarmos o valor o retornamos, certo? Porém a quantidade de interações que o algoritmo terá será muito elevada considerando que contenha um número grande de elementos, este tipo de pesquisa é chamado de pesquisa linear, onde a função de complexidade da pesquisa cresce de forma linear.
 
 Dito isto vejamos um exemplo deste tipo de algoritmo.
 
@@ -32,7 +32,7 @@ Logo abaixo podemos ver um gráfico que mostra a complexidade do algoritmo cresc
 
 Para contornar este problema existe um algoritmos denominado de busca binária, a busca binária é um algoritmo de busca, que serve para encontrar um determinado item em um vetor no qual o mesmo necessita estar ordenado.
 
-Seu funcionamento consiste em dividir o vetor pela metade repetidas vezes até que chegue ao resultado esperado, desta forma o número de interações com o vetor diminui e consequentemente diminui a função de complexidade do algoritmo.
+Seu funcionamento consiste em dividir o vetor pela metade repetidas vezes (Paradigma denominado [divide and conquer](https://github.com/GuilhermehChaves/google-skills/tree/master/algoritmos/divide_and_conquer)) para dividir nosso problema maior em vários sub problemas e assim os resolver isoladamente até que o problema principal seja resolvido por completo, desta forma o número de interações com o array diminui e consequentemente diminui a função de complexidade do algoritmo.
 
 Vejamos outro exemplo agora utilizando busca binária.
 
@@ -75,6 +75,12 @@ Logo abaixo podemos ver um outro gráfico demonstrando a função de complexidad
 Comparação da quantidade de interações entre a busca linear e a busca binária.
 
 ![004_compare](https://user-images.githubusercontent.com/48635609/91093901-73922e00-e630-11ea-98b0-a7370b856144.gif)
+
+Analisando o gif vemos cada etapa que o algoritmo de busca binária realiza, podemos notar que de primeira ele divide o array em duas partes
+e verifica se o elemento do meio é o que procuramos, caso seja já o achamos e é retornado sua posição, caso não seja verifica se o elemento ao meio é maior ou menor que o procurado,
+sendo menor sabemos que o número que procuramos está na metade à direita do array, logo podemos ignorar a metade à esquerda, em seguida
+o array é dividido novamente pela metade e o mesmo processo é realizado até que encontramos o valor desejado, esta técnica reduz a quantidade
+de interações que o algoritmo realizará com nosso array como pode ser visto através da comparação feita no gif a cima.
 
 ![003_table](https://user-images.githubusercontent.com/48635609/91092411-5eb49b00-e62e-11ea-9466-1d7a393f26e0.PNG)
 

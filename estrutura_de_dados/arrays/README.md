@@ -24,4 +24,4 @@ numeros := int[]{1,2,3,4,5}
 num := numeros[1]
 ```
 
-No exemplo a cima escrito em `Go` temos um array do tipo `int`(números inteiros) denominado `numeros` onde temos um conjunto de elementos, para podermos acessar um elemento específico em `números`, basta especificarmos seu índice no array como podemos ver na variável `num` que armazena o valor de `numeros` na posição 1 ou seja o elemento `2`, em geral a maioria das linguagens de programação os índices dos arrays sempre começam na posição 0, portanto índice 1 é referente ao elemento `2`.
+No exemplo a cima escrito em `Go` temos um array do tipo `int`(números inteiros) denominado `numeros` onde temos um conjunto de elementos, para podermos acessar um elemento específico em `números`, basta especificarmos seu índice no array como podemos ver na variável `num` que armazena o valor de `numeros` na posição 1 ou seja o elemento `2`, em geral na maioria das linguagens de programação os índices dos arrays começam na posição 0, portanto índice 1 é referente ao elemento `2`.

@@ -22,7 +22,7 @@ Repositório que contém conteúdos referente a skills técnicas necessárias pa
 
 ### Lista de estrutura de dados:
 
-- [ ] Arrays
+- [x] Arrays
 - [ ] Linked lists
 - [ ] Stacks
 - [ ] Queues

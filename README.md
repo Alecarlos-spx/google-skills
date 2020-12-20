@@ -25,7 +25,7 @@ Repositório que contém conteúdos referente a skills técnicas necessárias pa
 - [x] Arrays
 - [ ] Linked lists
 - [ ] Stacks
-- [ ] Queues
+- [x] Queues
 - [ ] Trees
 - [ ] Graphs
 - [ ] Heaps

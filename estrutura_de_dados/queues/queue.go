@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"unsafe"
 )
 
 type Queue struct { // struct da fila
@@ -14,11 +13,11 @@ type Queue struct { // struct da fila
 }
 
 func (q *Queue) create(c int) { // função que cria uma fila
-	q.capacity = c                                    // capacidade da fila
-	q.data = make([]float64, c*int(unsafe.Sizeof(c))) // dados da fila iniciado vazio inicialmente
-	q.first = 0                                       // posição do primeiro elemento
-	q.last = -1                                       // posição do último elemento
-	q.nItems = 0                                      // número de elementos
+	q.capacity = c              // capacidade da fila
+	q.data = make([]float64, c) // dados da fila iniciado vazio inicialmente
+	q.first = 0                 // posição do primeiro elemento
+	q.last = -1                 // posição do último elemento
+	q.nItems = 0                // número de elementos
 }
 
 func (q *Queue) insert(v float64) { // função que insere um elemento à fila

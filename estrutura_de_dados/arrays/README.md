@@ -20,7 +20,7 @@ Em programação um `array` ou arranjo, chamado também de variável composta é
 Exemplo:
 
 ```Go
-numeros := int[]{1,2,3,4,5}
+numeros := [5]int{1,2,3,4,5}
 num := numeros[1]
 ```
 

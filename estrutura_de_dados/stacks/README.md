@@ -80,11 +80,11 @@ No código a cima podemos ver a implementação da pilha em código.
 
 Primeiramente temos um struct denominado `Stack` que representa nossa pilha com os atributos:
 
-- top (Posição do elemento no topo)
+- `top` - Posição do elemento no topo
 
-- capacity (Tamanho da capacidade da pilha)
+- `capacity` - Capacidade total da pilha
 
-- data (Dados da pilha)
+- `data` - Dados da pilha
 
 Abaixo temos a função `create` que inicializa a pilha com os valores iniciais.
 

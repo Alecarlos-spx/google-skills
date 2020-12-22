@@ -3,7 +3,6 @@
 Um Graph ou Grafo é uma estrutura de dados que representa um par de conjuntos denominados:
 
 - `Vértices` (Vertex)
-
 - `Arestas` (Edges)
 
 Cada `Aresta` está associoada a dois `Vértices` sendo o primeiro o ponto inicial e o segundo o ponto final da aresta.

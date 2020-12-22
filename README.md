@@ -13,7 +13,7 @@ Repositório que contém conteúdos referente a skills técnicas necessárias pa
 - [ ] Algoritmos de ordenação
 - [ ] Estrutura de dados
 - [ ] Matemática discreta básica
-- [ ] Grafos
+- [x] Grafos
 - [ ] Recursão
 - [ ] Programação Orientada a Objeto
 - [ ] Big-O Notation
@@ -27,7 +27,7 @@ Repositório que contém conteúdos referente a skills técnicas necessárias pa
 - [x] Stacks
 - [x] Queues
 - [ ] Trees
-- [ ] Graphs
+- [x] Graphs
 - [ ] Heaps
 - [ ] Hash sets
 - [ ] Hash maps / Hash tables

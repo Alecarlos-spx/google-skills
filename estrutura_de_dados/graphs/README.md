@@ -197,13 +197,15 @@ Temos uma função `create` que cria um grafo;
 
 A função `addVertex` adiciona um novo vértice ao grafo, nela criamos um novo vértice e em seguida o adicionamos na lista de vértices do grafo;
 
-A função `addEdge` adiciona uma aresta ao grafo, ela é responsável por associar os vértices. Nela primeiramente fazemos uma busca pelos vértices de entrada e saída, em seguida uma nova aresta é criada passando os vértices de entrada e saída encontrados, no `vértice de entrada` usamos a função `addOutputEdge` para adicionar a aresta criada como sendo uma aresta de saída dele e usamos a função `addInputEdge` no `vértice de saída` para adicionar a aresta criada como uma aresta de entrada nele, ou seja `a aresta sai de start e entra em end` start -> end;
+A função `addEdge` adiciona uma aresta ao grafo, ela é responsável por associar os vértices. Nela primeiramente fazemos uma busca pelos vértices de início e final, em seguida uma nova aresta é criada passando os vértices de início e final encontrados, no `vértice de início` usamos a função `addOutputEdge` para adicionar a aresta criada como sendo uma aresta de saída dele e usamos a função `addInputEdge` no `vértice de final` para adicionar a aresta criada como uma aresta de entrada nele, ou seja `a aresta sai de início e entra em final` início -> final;
 
 A função `getVertex` procura um vértice através do seu valor, percorrendo cada vértice presente no grafo, quando encontrado o retorna, caso não encontre o vértice retorna nil;
 
 A função `BFS` representa o algoritmo `Breadth-first search`;
 
 A função `isVisited` faz parte do algoritmo `Breadth-first search`;
+
+`OBS: O arquivo graph.go contém comentários explicativos`
 
 ### Referências
 

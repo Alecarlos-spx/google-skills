@@ -9,7 +9,7 @@ type Vertex struct { // struct representando um vértice
 	data        interface{} // dado que iremos adidionar no vértice
 	inputEdges  *list.List  // arestas de entrada
 	outputEdges *list.List  // arestas de saída
-	heuristic   float64
+	h           float64
 	previousG   float64
 }
 
@@ -17,7 +17,7 @@ func (v *Vertex) create(value interface{}, h float64) { // função que cria um 
 	v.data = value             // setando o dado do vértice
 	v.inputEdges = list.New()  // inicia como uma lista vazia
 	v.outputEdges = list.New() // inicia como uma lista vazia
-	v.heuristic = h
+	v.h = h
 }
 
 func (v *Vertex) addInputEdge(e *Edge) { // função que adidiona uma aresta de entrada ao grafo
@@ -122,7 +122,7 @@ func (g *Graph) aStar(initialVertex, finalVertex *Vertex) {
 			children.previousG = father.previousG + edge.weight
 
 			opened.PushBack(&F{
-				value:     children.previousG + children.heuristic,
+				value:     children.previousG + children.h,
 				vertex:    children,
 				previousG: children.previousG,
 			})

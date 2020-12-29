@@ -9,11 +9,11 @@ type Vertex struct { // struct representando um vértice
 	data        interface{} // dado que iremos adidionar no vértice
 	inputEdges  *list.List  // arestas de entrada
 	outputEdges *list.List  // arestas de saída
-	heuristic   uint64
+	heuristic   float64
 	previousG   float64
 }
 
-func (v *Vertex) create(value interface{}, h uint64) { // função que cria um novo vértice
+func (v *Vertex) create(value interface{}, h float64) { // função que cria um novo vértice
 	v.data = value             // setando o dado do vértice
 	v.inputEdges = list.New()  // inicia como uma lista vazia
 	v.outputEdges = list.New() // inicia como uma lista vazia
@@ -52,7 +52,7 @@ func NewGraph() *Graph {
 	}
 }
 
-func (g *Graph) addVertex(data interface{}, h uint64) *Vertex { // função que adiciona um vértice ao grafo
+func (g *Graph) addVertex(data interface{}, h float64) *Vertex { // função que adiciona um vértice ao grafo
 	var vertex *Vertex = &Vertex{} // define um grafo
 	vertex.create(data, h)         // cria um grafo passando o dado
 	g.vertex.PushBack(vertex)      // adiciona o vértice na lista de vértices do grafo
@@ -101,8 +101,9 @@ func isVisited(l *list.List, e *Vertex) bool {
 // --------------------------------- algoritmo A* ----------------------------------------------
 
 type F struct {
-	value  uint64
-	vertex *Vertex
+	value     float64
+	vertex    *Vertex
+	previousG float64
 }
 
 func (g *Graph) aStar(initialVertex, finalVertex *Vertex) {
@@ -121,13 +122,15 @@ func (g *Graph) aStar(initialVertex, finalVertex *Vertex) {
 			children.previousG = father.previousG + edge.weight
 
 			openeds.PushBack(&F{
-				value:  uint64(children.previousG) + children.heuristic,
-				vertex: children,
+				value:     children.previousG + children.heuristic,
+				vertex:    children,
+				previousG: children.previousG,
 			})
 		}
 
 		element := getMinF(father, openeds)
 		father = element.Value.(*F).vertex
+		father.previousG = element.Value.(*F).previousG
 
 		fmt.Print(" -> " + father.data.(string))
 
@@ -138,7 +141,7 @@ func (g *Graph) aStar(initialVertex, finalVertex *Vertex) {
 
 func getMinF(old *Vertex, l *list.List) *list.Element {
 	var f *F = nil
-	var min uint64 = 999
+	var min float64 = 999
 	var minF *list.Element = nil
 
 	for i := l.Front(); i != nil; i = i.Next() {

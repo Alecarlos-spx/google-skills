@@ -107,10 +107,10 @@ type F struct {
 }
 
 func (g *Graph) aStar(initialVertex, finalVertex *Vertex) {
-	closeds := list.New()
-	openeds := list.New()
+	closed := list.New()
+	opened := list.New()
 
-	closeds.PushBack(initialVertex)
+	closed.PushBack(initialVertex)
 
 	var father *Vertex = initialVertex
 	fmt.Print(father.data.(string))
@@ -121,21 +121,21 @@ func (g *Graph) aStar(initialVertex, finalVertex *Vertex) {
 			var children *Vertex = edge.end
 			children.previousG = father.previousG + edge.weight
 
-			openeds.PushBack(&F{
+			opened.PushBack(&F{
 				value:     children.previousG + children.heuristic,
 				vertex:    children,
 				previousG: children.previousG,
 			})
 		}
 
-		element := getMinF(father, openeds)
+		element := getMinF(father, opened)
 		father = element.Value.(*F).vertex
 		father.previousG = element.Value.(*F).previousG
 
 		fmt.Print(" -> " + father.data.(string))
 
-		closeds.PushBack(father)
-		openeds.Remove(element)
+		closed.PushBack(father)
+		opened.Remove(element)
 	}
 }
 

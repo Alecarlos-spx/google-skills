@@ -37,7 +37,7 @@ Repositório que contém conteúdos referente a skills técnicas necessárias pa
 - [x] Binary search
 - [x] Quicksort
 - [x] Mergesort
-- [ ] A*
+- [x] A*
 - [ ] Breadth-first search
 - [ ] Depth-first search
 - [x] Divide and conquer​

@@ -153,13 +153,7 @@ func getMinF(old *Vertex, l *list.List) *list.Element {
 		}
 	}
 
-	if minF.Value.(*F).vertex != old {
-		return minF
-	}
-
-	l.Remove(minF)
-
-	return getMinF(minF.Value.(*F).vertex, l)
+	return minF
 }
 
 func main() {

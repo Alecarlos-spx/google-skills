@@ -100,60 +100,60 @@ func isVisited(l *list.List, e *Vertex) bool {
 
 // --------------------------------- algoritmo A* ----------------------------------------------
 
-type F struct {
-	value     float64
-	vertex    *Vertex
-	previousG float64
+type F struct { // Struct que representa o F(n)
+	value     float64 // Valor do cálculo F(n) = G(n) + H(n)
+	vertex    *Vertex // Endereço do vértice referente a este valor de F
+	previousG float64 // Valor da soma de G(n) dos vértices antecessores
 }
 
-func (g *Graph) aStar(initialVertex, finalVertex *Vertex) {
-	closed := list.New()
-	opened := list.New()
+func (g *Graph) aStar(initialVertex, finalVertex *Vertex) { // Função do algoritmo A*, recebe o vértice inicial e o vértice final
+	closed := list.New() // Variável referente a lista dos vértices fechados
+	opened := list.New() // Variável referente a lista dos vértices abertos
 
-	closed.PushBack(initialVertex)
+	closed.PushBack(initialVertex) // Adiciona o vértice inicial na lista dos vértices fechados
 
-	var father *Vertex = initialVertex
+	var father *Vertex = initialVertex // Vértice pai = vértice inicial
 	fmt.Print(father.data.(string))
 
-	for father != finalVertex {
-		for i := father.outputEdges.Front(); i != nil; i = i.Next() {
-			var edge *Edge = i.Value.(*Edge)
-			var children *Vertex = edge.end
-			children.previousG = father.previousG + edge.weight
+	for father != finalVertex { // Enquanto o vértice pai for diferente do vértice final, continua o loop
+		for i := father.outputEdges.Front(); i != nil; i = i.Next() { // Percorre cada aresta do vértice pai
+			var edge *Edge = i.Value.(*Edge)                    // Variável referente a aresta
+			var children *Vertex = edge.end                     // Recupera o filho deste vértice pai através da aresta
+			children.previousG = father.previousG + edge.weight // previousG do vértice filho = previousG do vértice pai + seu custo
 
-			opened.PushBack(&F{
+			opened.PushBack(&F{ // Adiciona um Struct de F na lista dos vértices abertos contendo as informações do vértice filho, incluindo seu valor de f
 				value:     children.previousG + children.h,
 				vertex:    children,
 				previousG: children.previousG,
 			})
 		}
 
-		element := getMinF(father, opened)
-		father = element.Value.(*F).vertex
-		father.previousG = element.Value.(*F).previousG
+		element := getMinF(opened)                      // Retorna o elemento com o menor valor de F
+		father = element.Value.(*F).vertex              // O vértice pai agora passa a ser o elemento retornado
+		father.previousG = element.Value.(*F).previousG // Por garamtia o previousG do novo pai é o previousG presente no elemento retornado
 
-		fmt.Print(" -> " + father.data.(string))
+		fmt.Print(" -> " + father.data.(string)) // Printa o valor do vértice de menor F ou seja as decisões que o algoritmo tomou
 
-		closed.PushBack(father)
-		opened.Remove(element)
+		closed.PushBack(father) // Adiciona o novo pai a lista dos vértices fechados
+		opened.Remove(element)  // Remove o elemento da lista dos vértices aberto
 	}
 }
 
-func getMinF(old *Vertex, l *list.List) *list.Element {
-	var f *F = nil
-	var min float64 = 999
-	var minF *list.Element = nil
+func getMinF(l *list.List) *list.Element { // Função que retorna o menor valor de F(n)
+	var f *F = nil               // Variável que armazena um endereço de F
+	var min float64 = 999        // Variável min que armazena o valor mínimo de F
+	var minF *list.Element = nil // Variável minF que armazena um endereço de *list.Element referente ao elemento com o valor mínimo, que será o elemento retornado
 
-	for i := l.Front(); i != nil; i = i.Next() {
-		f = i.Value.(*F)
+	for i := l.Front(); i != nil; i = i.Next() { // Percorre cada elemento da lista
+		f = i.Value.(*F) // Variável f = endereço de F presente na lista
 
-		if f.value <= min {
-			min = f.value
-			minF = i
+		if f.value <= min { // Caso o value de f seja menor ou igual ao min
+			min = f.value // Variável min passar a ser o value de f
+			minF = i      // Variável minf passa a ser o elemento
 		}
 	}
 
-	return minF
+	return minF // Retorna o elemento da lista do menor valor de f
 }
 
 func main() {
